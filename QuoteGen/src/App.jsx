@@ -1,38 +1,44 @@
 import { useState } from "react";
 import quotes from "./data/quotes";
-import './App.css'
+import "./App.css";
 
 function App() {
-
   const [currentIndex, setCurrentIndex] = useState(0);
 
- return (
-  <div className="container">
+  return (
+    <div className="container">
+      <div className="quote-card">
+        <h1>Random Quote Generator</h1>
 
-    <div className="quote-card">
+        <h2>{quotes[currentIndex].text}</h2>
 
-      <h1>Random Quote Generator</h1>
+        <p>{quotes[currentIndex].author}</p>
 
-      <h2>{quotes[currentIndex].text}</h2>
-
-      <p>{quotes[currentIndex].author}</p>
-
-      <button
-        onClick={()=>{
-          if(currentIndex === quotes.length-1){
-            setCurrentIndex(0)
-          }else{
-            setCurrentIndex(currentIndex+1)
-          }
-        }}
-      >
-        Next Quote
-      </button>
-
+        <button
+          onClick={() => {
+            if (currentIndex === quotes.length - 1) {
+              setCurrentIndex(0);
+            } else {
+              setCurrentIndex(currentIndex + 1);
+            }
+          }}
+        >
+          Next Quote
+        </button>
+        <button
+          onClick={() => {
+            if (currentIndex === 0) {
+              setCurrentIndex(quotes.length - 1);
+            } else {
+              setCurrentIndex(currentIndex - 1);
+            }
+          }}
+        >
+          Prev Quote
+        </button>
+      </div>
     </div>
-
-  </div>
-)
+  );
 }
 
 export default App;
