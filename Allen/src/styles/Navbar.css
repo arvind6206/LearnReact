@@ -1,0 +1,123 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.navbar{
+    width: 100%;
+    background: #ffffff;
+    padding: 20px 140px;
+    border-bottom: 1px solid #e5e5e5;
+}
+.nav-top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-title{
+    font-size: 42px;
+    font-weight: 900;
+    color: #0056b3;
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 1px;
+}
+
+.nav-right{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.phone-icon{
+    width: 32px;
+    height: 32px;
+    background: #0056d2;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.logo{
+    height: 30px;      /* Adjust until it matches the original */
+    width: auto;
+    cursor: pointer;
+    object-fit: contain;
+}
+
+.btn{
+    padding: 10px 17px;
+    border: 2px solid #0056d2;
+    background: white;
+    color: #222;
+    border-radius: 25px;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn:hover{
+    background: #f2f2f2;
+    color: #222;
+}
+
+.nav-down{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 70px;
+    margin-top: 28px;
+}
+
+.nav-down p{
+    font-size: 17px;
+    font-weight: 500;
+    color: #1a1a1a;
+    cursor: pointer;
+    transition: 0.3s;
+    white-space: nowrap;
+}
+
+.nav-down p:hover{
+    color: #0056d2;
+}
+
+.scholarship{
+    position: relative;
+    display: inline-block;
+    align-items: center;
+}
+
+/* .scholarship span{
+    position: absolute;
+    top: -12px;
+    right: -38px;
+    background: #f39c12;
+    color: white;
+    font-size: 9px;
+    font-weight: 700;
+    padding: 2px 6px;
+    border-radius: 10px;
+    letter-spacing: 0.3px;;
+} */
+.new-badge{
+    position: absolute;
+
+    top: -18px;
+    right: -30px;
+
+    background: #f59e0b;
+    color: #fff;
+
+    font-size: 10px;
+    font-weight: 700;
+
+    padding: 3px 8px;
+    border-radius: 999px;
+
+    line-height: 1;
+    white-space: nowrap;
+}
