@@ -1,0 +1,54 @@
+.result-container {
+  width: 90%;
+  max-width: 600px;
+  margin: 60px auto;
+  background: white;
+  padding: 40px;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, .2);
+}
+
+.result-title {
+  color: #333;
+  margin-bottom: 30px;
+}
+
+.score-card {
+  background: #eef2ff;
+  border-radius: 12px;
+  padding: 30px;
+  margin-bottom: 25px;
+}
+
+.score-card h2 {
+  font-size: 45px;
+  color: #4f46e5;
+}
+
+.score-card p {
+  margin-top: 10px;
+  color: #666;
+  font-size: 18px;
+}
+
+.result-message {
+  margin-bottom: 30px;
+  color: #16a34a;
+  font-size: 24px;
+}
+
+.restart-btn {
+  background: #22c55e;
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 18px;
+  transition: .3s;
+}
+
+.restart-btn:hover {
+  background: #16a34a;
+}
