@@ -16,3 +16,21 @@ export function usePost() {
   }, []);
   return post.title;
 }
+
+
+export function useFetch(url){
+    const [finalData, setFinaldata] = useState({})
+
+    async function getDetails(){
+        const res = await fetch(url)
+        const json = await res.json()
+        setFinaldata(json)
+    }
+    useEffect(()=>{
+        getDetails()
+    },[])
+
+    return {
+        finalData
+    }
+}
