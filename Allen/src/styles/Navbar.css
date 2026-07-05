@@ -9,6 +9,11 @@
     background: #ffffff;
     padding: 20px 140px;
     border-bottom: 1px solid #e5e5e5;
+     position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
 }
 .nav-top{
     display: flex;
@@ -91,18 +96,7 @@
     align-items: center;
 }
 
-/* .scholarship span{
-    position: absolute;
-    top: -12px;
-    right: -38px;
-    background: #f39c12;
-    color: white;
-    font-size: 9px;
-    font-weight: 700;
-    padding: 2px 6px;
-    border-radius: 10px;
-    letter-spacing: 0.3px;;
-} */
+
 .new-badge{
     position: absolute;
 
