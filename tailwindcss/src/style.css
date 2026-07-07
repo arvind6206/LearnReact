@@ -1,1 +1,17 @@
 @import "tailwindcss";
+
+@theme{
+    --color-dark-blue: oklch(21.613% 0.09471 275.052);
+    --font-arial: Arial, sans-serif;
+}
+
+@utility grid-cols-autofit{
+   grid-template-cols: repeat(auto-fit, minmax(13.75rem, 1fr));
+}
+
+@layer base{
+    h1, h2, h3{
+        font-weight: 700;
+    }
+}
+

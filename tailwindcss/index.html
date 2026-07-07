@@ -6,17 +6,148 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>tailwindcss</title>
   </head>
-  <body class="bg-slate-950 text-white">
-    <section class="space-y-5 text-center max-w-3xl mx-auto px-5 py-12">
-      <h1 class="text-4xl font-semibold">Let's learn tailwind!</h1>
+  <body class="bg-dark-blue font-arial text-white pb-[50vh]">
+    <header class="max-w-3xl mx-auto px-5 py-3">
+      <nav>
+        <ul
+          class="uppercase tracking-wider flex gap-x-4 gap-y-1 text-sm justify-center sm:justify-between flex-wrap"
+        >
+          <li class="sm:me-auto">
+            <a
+              href=""
+              class="hover:bg-fuchsia-700 transition-colore p-1 rounded-sm"
+              >Home</a
+            >
+          </li>
+          <li class="sm:me-auto">
+            <a
+              href=""
+              class="hover:bg-fuchsia-700 transition-colore p-1 rounded-sm"
+              >Start Here</a
+            >
+          </li>
+          <li class="sm:me-auto">
+            <a
+              href=""
+              class="hover:bg-fuchsia-700 transition-colore p-1 rounded-sm"
+              >Projects</a
+            >
+          </li>
+          <li class="sm:me-auto">
+            <a
+              href=""
+              class="hover:bg-fuchsia-700 transition-colore p-1 rounded-sm"
+              >About</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
 
-    <p class="text-[1.2rem]">
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi quod, ex voluptatem recusandae ut minus ad officia iure reprehenderit repellat beatae, cum necessitatibus, 
-      repellendus consectetur quis atque porro velit deleniti!
-    </p>
+    <section
+      class="text-center max-w-3xl lg:max-w-5xl mx-auto px-5 py-12 grid gap-5 grid-cols-autofit"
+    >
+      <img
+        src="/public/waterfall.avif"
+        alt="waterfall"
+        width="2200"
+        height="1331"
+        class="rounded-xl lg:order-2"
+      />
 
-    <a href="" class="inline-block bg-fuchsia-700 py-3 px-7 
-    rounded-full hover:bg-fuchsia-600 transition-colors">Click Here</a>
+      <div class="space-y-5">
+        <h1 class="text-4xl">Let's learn tailwind!</h1>
+
+        <p class="text-[1.2rem]">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi quod,
+          ex voluptatem recusandae ut minus ad officia iure reprehenderit
+          repellat beatae, cum necessitatibus, repellendus consectetur quis
+          atque porro velit deleniti!
+        </p>
+
+        <a
+          href=""
+          class="inline-block bg-fuchsia-700 py-3 px-7 rounded-full hover:bg-fuchsia-600 transition-colorsafter:content-['>'] after:ml-2 after:opacity-0 hover:after:opacity-100 after:transition-opacity"
+          >Click Here</a
+        >
+      </div>
+    </section>
+
+    <section
+      class="max-w-3xl lg:max-w-5xl mx-auto px-5 py-12 grid gap-5 grid-cols-[repeat(auto-fit,minmax(13.75rem,1fr))]"
+    >
+      <h2 class="text-3xl text-center col-span-full mb-4">Resources</h2>
+
+      <div
+        class="bg-blue-800 bg-linear-to-bl even:bg-linear-to-r from-purple-800 to-blue-800 space-y-2 p-3 rounded-md"
+      >
+        <h3 class="text-lg">What is Tailwind?</h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellendus,
+          eius?
+        </p>
+        <a
+          href=""
+          class="text-fuchsia-300 hover:text-white transition-colors after:content-['>'] after:ml-2 after:opacity-0 hover:after:opacity-100 after:transition-opacity"
+          >Read More</a
+        >
+      </div>
+      <div
+        class="bg-blue-800 bg-linear-to-bl even:bg-linear-to-r from-purple-800 to-blue-800 space-y-2 p-3 rounded-md"
+      >
+        <h3 class="text-lg">What is Tailwind?</h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellendus,
+          eius?
+        </p>
+        <a
+          href=""
+          class="text-fuchsia-300 hover:text-white transition-colors after:content-['>'] after:ml-2 after:opacity-0 hover:after:opacity-100 after:transition-opacity"
+          >Read More</a
+        >
+      </div>
+      <div
+        class="bg-blue-800 bg-linear-to-bl even:bg-linear-to-r from-purple-800 to-blue-800 space-y-2 p-3 rounded-md"
+      >
+        <h3 class="text-lg">What is Tailwind?</h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellendus,
+          eius?
+        </p>
+        <a
+          href=""
+          class="text-fuchsia-300 hover:text-white transition-colors after:content-['>'] after:ml-2 after:opacity-0 hover:after:opacity-100 after:transition-opacity"
+          >Read More</a
+        >
+      </div>
+      <div
+        class="bg-blue-800 bg-linear-to-bl even:bg-linear-to-r from-purple-800 to-blue-800 space-y-2 p-3 rounded-md"
+      >
+        <h3 class="text-lg">What is Tailwind?</h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellendus,
+          eius?
+        </p>
+        <a
+          href=""
+          class="text-fuchsia-300 hover:text-white transition-colors after:content-['>'] after:ml-2 after:opacity-0 hover:after:opacity-100 after:transition-opacity"
+          >Read More</a
+        >
+      </div>
+      <div
+        class="bg-blue-800 bg-linear-to-bl even:bg-linear-to-r from-purple-800 to-blue-800 space-y-2 p-3 rounded-md"
+      >
+        <h3 class="text-lg">What is Tailwind?</h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellendus,
+          eius?
+        </p>
+        <a
+          href=""
+          class="text-fuchsia-300 hover:text-white transition-colors after:content-['>'] after:ml-2 after:opacity-0 hover:after:opacity-100 after:transition-opacity"
+          >Read More</a
+        >
+      </div>
     </section>
     <script type="module" src="/src/main.ts"></script>
   </body>
