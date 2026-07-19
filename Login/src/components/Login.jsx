@@ -36,7 +36,8 @@ function Login() {
           className='text-indigo-700 cursor-pointer'>Create Account</p>
         </div>
         <div className='bg-indigo-600 h-9 flex items-center justify-center rounded-sm ml-4'>
-          <button className='text-white'>Login</button>
+          <button 
+           className='text-white'>Login</button>
         </div>
       </div>
     </div>

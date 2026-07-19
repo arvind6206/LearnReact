@@ -16,7 +16,7 @@ export const signup = async(req, res) => {
 
         const {name, email, password} = req.body
 
-        const user =await  UserModel.find({email})
+        const user = await  UserModel.findOne({email})
         if(user){
             return res.status(400).json({
                 msg: "User already exist"
@@ -64,7 +64,6 @@ export const login = async(req, res) => {
         const token = jwt.sign({
             id: foundUser._id
         }, process.env.JWT_SECRET)
-        console.log(token)
         res.status(200).json({
             msg: "Login Successfully",
             token: token
