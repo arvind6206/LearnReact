@@ -1,24 +1,10 @@
-import { UserModel } from "../models/User.js"
+import { registeredUserSchema, UserModel } from "../models/User.js"
 import bcrypt from 'bcryptjs'
 import * as z from 'zod'
+import jwt from 'jsonwebtoken'
 
 export const signup = async(req, res) => {
-
-    const registeredUserSchema = z.object({
-    name: z.string(),
-    email: z.string(),
-    password: z.string()
-        .min(6, "Password must be at least 6 characters")
-        .refine((val) => /[A-Z]/.test(val), {
-            message: "Password must contain at least one uppercase letter"
-        })
-        .refine((val) => /[0-9]/.test(val), {
-            message: "Password must contain at least one number"
-        })
-        .refine((val) => /[@$!%*#?&]/.test(val), {
-            message: "Password must contain at least one special character"
-        })
-})
+   
     try {
         const result = registeredUserSchema.safeParse(req.body)
         if(!result.success){
@@ -29,6 +15,13 @@ export const signup = async(req, res) => {
         }
 
         const {name, email, password} = req.body
+
+        const user =await  UserModel.find({email})
+        if(user){
+            return res.status(400).json({
+                msg: "User already exist"
+            })
+        }
 
         if(!email || !password || !email){
             return res.status(400).json({
@@ -44,6 +37,37 @@ export const signup = async(req, res) => {
         })
         res.status(200).json({
             msg: "User signed up successfully"
+        })
+    } catch (error) {
+        console.log(error)
+        res.status(500).json({
+            msg: "Internal Server Error"
+        })
+    }
+}
+
+export const login = async(req, res) => {
+    try {
+        const {email, password} = req.body
+        const foundUser = await UserModel.findOne({email})
+        if(!foundUser){
+            return res.status(400).json({
+                msg: "User not found"
+            })
+        }
+        const matched = await bcrypt.compare(password, foundUser.password)
+        if(!matched){
+            return res.status(400).json({
+                msg: "Password does not match"
+            })
+        }
+        const token = jwt.sign({
+            id: foundUser._id
+        }, process.env.JWT_SECRET)
+        console.log(token)
+        res.status(200).json({
+            msg: "Login Successfully",
+            token: token
         })
     } catch (error) {
         console.log(error)
