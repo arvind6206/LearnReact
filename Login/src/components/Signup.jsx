@@ -16,7 +16,7 @@ function Signup() {
       const res = await axios.post('http://localhost:3000/api/v1/user/signup', 
         formData
       )
-      console.log("Signup successfully:", res.data)
+      alert("Signup successfully")
     } catch (error) {
       console.log(error.response?.data)
 
