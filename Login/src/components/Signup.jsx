@@ -1,8 +1,6 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
 
 function Login() {
-    const navigate = useNavigate()
   return (
     <div className="bg-gray-50 flex items-center justify-center min-h-screen">
       <div className="bg-white rounded-2xl shadow-lg p-8 w-full max-w-sm">
@@ -10,6 +8,13 @@ function Login() {
           <h1>Welcome Back!</h1>
         </div>
         <div className="m-5">
+            <label>Name</label>
+          <br />
+          <input
+            className="w-75 h-9 border-1 rounded-sm mt-1 mb-2 p-2"
+            type="text"
+            placeholder="Enter your name"
+          />
           <label>Email Address</label>
           <br />
           <input
@@ -27,16 +32,9 @@ function Login() {
           />
           <p className="text-sm">Forgot Password?</p>
         </div>
-        <div className="flex justify-between m-5 text-sm">
-          <div className="flex flex-start">
-            <input type="checkbox" />
-            <p>Remember me</p>
-          </div>
-          <p onClick={() => navigate('/signup')}
-          className='text-indigo-700 cursor-pointer'>Create Account</p>
-        </div>
+    
         <div className='bg-indigo-600 h-9 flex items-center justify-center rounded-sm ml-4'>
-          <button className='text-white'>Login</button>
+          <button className='text-white'>Signup</button>
         </div>
       </div>
     </div>
