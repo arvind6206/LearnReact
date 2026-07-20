@@ -6,7 +6,7 @@ function Wishlist() {
       
       {/* Sidebar */}
       <div className="w-64 bg-slate-200 p-5">
-        <div className='w-55 bg-slate-300'>
+        <div className='w-55 bg-slate-300 rounded-sm'>
           <h1 className="text-3xl font-bold">Your Wish List</h1>
         <span className="text-md font-semibold">Default List</span>
         </div>
