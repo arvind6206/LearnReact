@@ -1,3 +1,4 @@
+import Toolbar from "./Toolbar";
 import WishlistTopbar from "./WishlistTopbar";
 
 function Wishlist() {
@@ -19,7 +20,7 @@ function Wishlist() {
           <WishlistTopbar/>
         </h2>
 
-        {/* Toolbar */}
+        <Toolbar/>
 
         {/* Product Grid */}
 
