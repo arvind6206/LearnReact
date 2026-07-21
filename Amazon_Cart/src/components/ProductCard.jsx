@@ -1,6 +1,13 @@
 import React from "react";
+import { useRecoilState } from "recoil";
+import cartItemsState from "../store/cartItemsState.js";
 
 function ProductCard({ product }) {
+  const [cartItems, setCartItems] = useRecoilState(cartItemsState)
+
+  const handleAddToCart = () => {
+    setCartItems([...cartItems, product])
+  }
   return (
     <>
       <div className="overflow-hidden rounded-lg border bg-white transition hover:shadow-lg">
@@ -24,7 +31,8 @@ function ProductCard({ product }) {
           <p className="mt-2 text-2xl font-bold">₹{product.price}</p>
 
           {/* Button */}
-          <button className="mt-4 rounded-full bg-yellow-400 py-2 font-semibold hover:bg-yellow-500">
+          <button onClick={handleAddToCart}
+          className="mt-4 rounded-full bg-yellow-400 py-2 font-semibold hover:bg-yellow-500">
             Add to Cart
           </button>
         </div>
