@@ -2,9 +2,11 @@ import React from "react";
 import { CiShoppingCart } from "react-icons/ci";
 import { useRecoilValue } from "recoil";
 import cartItemsState from "../store/cartItemsState";
+import { useNavigate } from "react-router-dom";
 
 function Navbar() {
   const cartItems = useRecoilValue(cartItemsState);
+  const navigate = useNavigate()
 
   return (
     <div className="flex h-15 w-full items-center justify-between bg-gray-950">
@@ -16,7 +18,8 @@ function Navbar() {
         <p>Hello, User</p>
 
         {/* Cart */}
-        <div className="relative cursor-pointer">
+        <div onClick={()=>navigate('/cart')}
+        className="relative cursor-pointer">
           <CiShoppingCart size={38} />
 
           {cartItems.length > 0 && (

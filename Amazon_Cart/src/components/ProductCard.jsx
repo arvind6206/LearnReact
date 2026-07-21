@@ -6,8 +6,24 @@ function ProductCard({ product }) {
   const [cartItems, setCartItems] = useRecoilState(cartItemsState)
 
   const handleAddToCart = () => {
-    setCartItems([...cartItems, product])
-  }
+    setCartItems((prevCartItems) => {
+      const existingItemIndex = prevCartItems.findIndex(
+        (item) => item.id === product.id
+      );
+
+      if (existingItemIndex !== -1) {
+        // If item already exists, update its quantity
+        return prevCartItems.map((item, index) =>
+          index === existingItemIndex
+            ? { ...item, quantity: item.quantity + 1 }
+            : item
+        );
+      } else {
+        // If item does not exist, add it with quantity 1
+        return [...prevCartItems, { ...product, quantity: 1 }];
+      }
+    });
+  };
   return (
     <>
       <div className="overflow-hidden rounded-lg border bg-white transition hover:shadow-lg">
